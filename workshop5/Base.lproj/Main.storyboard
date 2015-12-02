@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="workshop5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-mK-khW">
+                                <rect key="frame" x="0.0" y="69" width="600" height="531"/>
+                                <animations/>
+                            </mapView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-ZL-oxD">
+                                <rect key="frame" x="7" y="81" width="587" height="507"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="8b4-LN-hz9" kind="embed" id="ooB-b2-pmz"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fdV-mK-khW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="BbB-c6-5sY"/>
+                            <constraint firstItem="K3B-ZL-oxD" firstAttribute="leading" secondItem="fdV-mK-khW" secondAttribute="leading" constant="7" id="N5B-0x-cTu"/>
+                            <constraint firstItem="fdV-mK-khW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UM9-SL-PaR"/>
+                            <constraint firstItem="K3B-ZL-oxD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="gTH-gl-wCZ"/>
+                            <constraint firstItem="K3B-ZL-oxD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-12" id="j5H-xb-c6D"/>
+                            <constraint firstItem="K3B-ZL-oxD" firstAttribute="trailing" secondItem="fdV-mK-khW" secondAttribute="trailing" constant="-6" id="kvz-WW-Hew"/>
+                            <constraint firstItem="fdV-mK-khW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uer-mQ-1of"/>
+                            <constraint firstAttribute="trailing" secondItem="fdV-mK-khW" secondAttribute="trailing" id="zbr-ib-mqm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerVC" destination="K3B-ZL-oxD" id="jxc-hj-ezK"/>
+                        <outlet property="myMap" destination="fdV-mK-khW" id="O1Y-G5-J72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uhh-ud-yfI">
+            <objects>
+                <viewController id="8b4-LN-hz9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9AQ-T6-ZKf"/>
+                        <viewControllerLayoutGuide type="bottom" id="XWu-4G-vsi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jAY-pY-huQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="app" translatesAutoresizingMaskIntoConstraints="NO" id="joO-YJ-6js">
+                                <rect key="frame" x="-333" y="-17" width="1197" height="700"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bournemouth Pier Approach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzf-mi-UzO">
+                                <rect key="frame" x="0.0" y="218" width="600" height="66"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="joO-YJ-6js" secondAttribute="trailing" id="Dym-PE-ZZ3"/>
+                            <constraint firstItem="XWu-4G-vsi" firstAttribute="top" secondItem="Pzf-mi-UzO" secondAttribute="bottom" constant="316" id="Ff8-5K-5Y6"/>
+                            <constraint firstItem="joO-YJ-6js" firstAttribute="leading" secondItem="jAY-pY-huQ" secondAttribute="leading" id="HFn-Yi-pyC"/>
+                            <constraint firstItem="Pzf-mi-UzO" firstAttribute="top" secondItem="9AQ-T6-ZKf" secondAttribute="bottom" constant="218" id="Mo0-pH-oEf"/>
+                            <constraint firstItem="joO-YJ-6js" firstAttribute="top" secondItem="9AQ-T6-ZKf" secondAttribute="bottom" id="UTx-re-lqy"/>
+                            <constraint firstItem="joO-YJ-6js" firstAttribute="bottom" secondItem="XWu-4G-vsi" secondAttribute="top" id="ex6-19-wkv"/>
+                            <constraint firstAttribute="trailing" secondItem="Pzf-mi-UzO" secondAttribute="trailing" id="jcW-fF-O7x"/>
+                            <constraint firstItem="Pzf-mi-UzO" firstAttribute="leading" secondItem="jAY-pY-huQ" secondAttribute="leading" id="uuy-tt-cVD"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-5g-DjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="1168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="app" width="558" height="887"/>
+    </resources>
+</document>
