@@ -58,6 +58,7 @@ class ViewController: UIViewController {
             //myImage.image = nil
             
             containerVC.hidden = true
+            
         }
 
             
