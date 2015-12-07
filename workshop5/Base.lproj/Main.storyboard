@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BKu-br-yUS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-mK-khW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-mK-khW">
                                 <rect key="frame" x="0.0" y="69" width="600" height="531"/>
                                 <animations/>
                             </mapView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-ZL-oxD">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-ZL-oxD">
                                 <rect key="frame" x="7" y="81" width="587" height="507"/>
                                 <animations/>
                                 <connections>
@@ -41,6 +41,7 @@
                             <constraint firstAttribute="trailing" secondItem="fdV-mK-khW" secondAttribute="trailing" id="zbr-ib-mqm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5B0-w4-UjO"/>
                     <connections>
                         <outlet property="containerVC" destination="K3B-ZL-oxD" id="jxc-hj-ezK"/>
                         <outlet property="myMap" destination="fdV-mK-khW" id="O1Y-G5-J72"/>
@@ -48,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="295"/>
+            <point key="canvasLocation" x="1266" y="295"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uhh-ud-yfI">
@@ -63,12 +64,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="app" translatesAutoresizingMaskIntoConstraints="NO" id="joO-YJ-6js">
-                                <rect key="frame" x="-333" y="-17" width="1197" height="700"/>
+                                <rect key="frame" x="-377" y="-100" width="1197" height="700"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bournemouth Pier Approach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzf-mi-UzO">
-                                <rect key="frame" x="0.0" y="218" width="600" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mu-wS-uBM">
+                                <rect key="frame" x="277" y="386" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="8l2-BP-EG5" kind="show" id="J3o-S8-0R7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bournemouth Pier Approach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcC-KP-2ZP">
+                                <rect key="frame" x="0.0" y="239" width="600" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,14 +87,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XWu-4G-vsi" firstAttribute="top" secondItem="3mu-wS-uBM" secondAttribute="bottom" constant="184" id="6ab-hb-uv9"/>
+                            <constraint firstAttribute="trailing" secondItem="LcC-KP-2ZP" secondAttribute="trailing" id="Cgm-1l-5QZ"/>
                             <constraint firstAttribute="trailing" secondItem="joO-YJ-6js" secondAttribute="trailing" id="Dym-PE-ZZ3"/>
-                            <constraint firstItem="XWu-4G-vsi" firstAttribute="top" secondItem="Pzf-mi-UzO" secondAttribute="bottom" constant="316" id="Ff8-5K-5Y6"/>
                             <constraint firstItem="joO-YJ-6js" firstAttribute="leading" secondItem="jAY-pY-huQ" secondAttribute="leading" id="HFn-Yi-pyC"/>
-                            <constraint firstItem="Pzf-mi-UzO" firstAttribute="top" secondItem="9AQ-T6-ZKf" secondAttribute="bottom" constant="218" id="Mo0-pH-oEf"/>
                             <constraint firstItem="joO-YJ-6js" firstAttribute="top" secondItem="9AQ-T6-ZKf" secondAttribute="bottom" id="UTx-re-lqy"/>
                             <constraint firstItem="joO-YJ-6js" firstAttribute="bottom" secondItem="XWu-4G-vsi" secondAttribute="top" id="ex6-19-wkv"/>
-                            <constraint firstAttribute="trailing" secondItem="Pzf-mi-UzO" secondAttribute="trailing" id="jcW-fF-O7x"/>
-                            <constraint firstItem="Pzf-mi-UzO" firstAttribute="leading" secondItem="jAY-pY-huQ" secondAttribute="leading" id="uuy-tt-cVD"/>
+                            <constraint firstItem="LcC-KP-2ZP" firstAttribute="top" secondItem="9AQ-T6-ZKf" secondAttribute="bottom" constant="239" id="hpk-fS-beB"/>
+                            <constraint firstItem="LcC-KP-2ZP" firstAttribute="centerX" secondItem="3mu-wS-uBM" secondAttribute="centerX" id="jn6-mk-9dw"/>
+                            <constraint firstItem="LcC-KP-2ZP" firstAttribute="centerY" secondItem="joO-YJ-6js" secondAttribute="centerY" id="kq4-vs-yib"/>
+                            <constraint firstItem="LcC-KP-2ZP" firstAttribute="leading" secondItem="jAY-pY-huQ" secondAttribute="leading" id="ybI-5C-EFU"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -94,6 +105,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-5g-DjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="440" y="1168"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EE2-VH-dwa">
+            <objects>
+                <viewController id="8l2-BP-EG5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eQb-pc-bbh"/>
+                        <viewControllerLayoutGuide type="bottom" id="a6u-KV-rxP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K7r-l1-IlU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inq-TA-6Je" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="1203"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sjC-dB-k0v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKu-br-yUS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yv8-ld-Waa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tiU-TA-xxq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bz5-hZ-Yon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="295"/>
         </scene>
     </scenes>
     <resources>
